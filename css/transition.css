@@ -1,0 +1,49 @@
+.splashbg{
+    display: none;
+}
+body.appear .splashbg{
+	display:block;
+	animation-name:PageAnime;
+	animation-duration:1.2s;
+	animation-timing-function:ease-in-out;
+	animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+	z-index: 999;
+    width: 50%;
+    height: 100vh;
+    top: 0;
+	left: 0;
+    transform: translateX(-300%) skewX(-45deg);
+    background-color: #333;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+	0% {
+		transform-origin:left ;
+        /* topとかbottomとかrightにしても結果は変わらなかったのでこれの必要性に
+        疑問を感じます */
+		transform:translateX(-300%) skewX(-45deg);
+	}
+	100% {
+		transform-origin:left ;
+		transform:translateX(500%) skewX(-45deg);
+    }}
+#container{
+    opacity: 0;
+}
+body.appear #container{
+    animation-name: pageanimeappear;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes pageanimeappear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

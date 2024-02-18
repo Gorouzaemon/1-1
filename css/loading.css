@@ -1,0 +1,21 @@
+#splash{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+}
+#splash_text{
+    width: 100%;
+    position: absolute;
+    /* position relativeはないんですか？？？？？？ */
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    color: #fff;
+    transform: translate(-50%,-50%); 
+    /* transformこれはなんのためにあるものなのでしょうか？？？？？？ */
+    /* hamburgercssと同じ理由ならスルーしてください。申し訳ありません */
+}
